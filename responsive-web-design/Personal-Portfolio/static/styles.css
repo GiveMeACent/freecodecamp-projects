@@ -1,0 +1,231 @@
+:root{
+    --first-color: #000000;
+    --second-color: #5f99ff;
+    --third-color: #ffffff;
+    --fourth-color: #838383;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-margin-top: 30rem;
+}
+
+body{
+    background-color: var(--first-color);
+}
+
+
+section{
+    margin-top: 12em;
+}
+
+h1, h2, a, p, .title, .subtitle, .nav-link{
+    color: var(--third-color);
+    font-family: 'Overpass', sans-serif;
+}
+
+h1{
+    font-size: 90px;
+}
+
+h2{
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    justify-content: space-evenly;
+    background-image: linear-gradient(
+        180deg,
+        var(--first-color) 0%,
+        var(--first-color) 70%,
+        rgba(0,0,0,0)
+    );
+    height: 100px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--second-color);
+    margin-top: 40px;
+}
+
+.welcome-section{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.welcome-div{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    width: 30%;
+}
+
+.photo-div{
+    max-width: 100%;
+}
+
+.personal-image{
+    max-width: 30%;
+    height: auto;
+}
+
+.description{
+    color: var(--fourth-color);
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.scroll{
+    padding-top: 30px;
+    border-bottom: solid 1px var(--second-color);
+    padding-bottom: 10px;
+    width: 200px;
+}
+
+.skillset{
+    display: flex;
+    flex-direction: row;
+}
+
+.skillset-div{
+    width: 30%;
+}
+
+.skillset-description{
+    max-width: 100%;
+}
+
+.title{
+    color: var(--second-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.subtitle{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-introduction{
+    display: flex;
+    flex-direction: row;
+}
+
+.projects-introduction-div{
+    width: 30%;
+}
+
+.projects-description{
+    max-width: 80%;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+
+.project-tile{
+    padding: 30px;
+}
+
+.project-link{
+    background-color: var(--second-color);
+    font-size: 30px;
+
+}
+
+.project-img{
+    width: 500px;
+    height: 500px;
+}
+
+.projects-link{
+    font-size: 30px;
+}
+
+.experience-years{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.workplace{
+    font-weight: bolder;
+    font-size: 25px;
+    border-left: solid 1px var(--second-color);
+    padding-left: 10px;
+}
+
+.work-experience, .year-experience{
+    padding-left: 11px;
+}
+
+.social-icons {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2em;
+}
+
+.left{
+    margin-left: 300px;
+}
+
+.right{
+    margin-right: 300px;
+}
+
+.bottom{
+    margin-top: 10%;
+}
+
+.center{
+    text-align: center;
+}
+
+.center-block{
+    margin: auto;
+}
+
+.small{
+    max-width: 50%;
+}
+
+@media screen and (max-width: 1300px) {
+    .welcome-section{
+    display: flex;
+    flex-direction: column;
+    }
+    .skillset{
+    display: flex;
+    flex-direction: column;
+    }
+    .projects-introduction{
+        display: flex;
+        flex-direction: column;
+    }
+}

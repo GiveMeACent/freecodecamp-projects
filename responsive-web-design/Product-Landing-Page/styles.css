@@ -1,0 +1,269 @@
+:root{
+    --first-text-color: #9787f8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html{
+    background-color: #453e67;
+}
+
+body{
+    background-color: #272135;
+    margin: 30px;
+    border-radius: 30px;
+    padding: 50px 100px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+section{
+    margin-top: 100px;
+}
+
+li {
+  list-style: none;
+  position: relative;
+  padding-left: 40px;
+}
+
+li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 35px;
+  width: 25px;
+  display: block;
+  border-top: 2px solid white;
+}
+
+form{
+    border: solid #a0a3ff 3px;
+    border-radius: 20px;
+    max-width: 400px;
+    max-height: 400px;
+    padding: 30px;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    background-color: black;
+    border: none;
+}
+
+iframe{
+    margin-top: 30px;
+}
+
+.nav-link{
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+}
+
+.inline{
+    display: inline;
+}
+
+.gradient-colored{
+    display: inline-block;
+    background-image: linear-gradient(45deg, white, var(--first-text-color));
+    background-size: 100%;
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.right{
+    position: relative;
+}
+
+.whited{
+    color: white;
+}
+
+.center{
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.small{
+    max-width: 60%;
+    line-height: 30px;
+    padding-top: 20px;
+}
+
+.medium{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.big{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right: 130px;
+    bottom: 1px;
+}
+
+.controller-title{
+    bottom: 170px;
+    z-index: 2;
+}
+
+.controller-guideline{
+    position: absolute;
+    bottom: 50px;
+}
+
+.controller-sale{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50px;
+}
+
+.controller-right{
+    right: 1159px;
+}
+
+.controller-left{
+    left: 1160px;
+}
+
+.controller-general{
+    width: 700px;
+    height: 700px;
+    position: relative;
+}
+
+.submit{
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+    background-color: var(--first-text-color);
+}
+
+.submit:hover{
+    cursor: pointer;
+}
+
+#nav-bar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 96%;
+    height: 100px;
+    position: fixed;
+    margin: auto -100px;
+    top: 0;
+    z-index: 4;
+    background-color: white;
+}
+
+#shop-title{
+    position: absolute;
+    right: 1000px;
+    top: 27px;
+}
+
+#shop-shop{
+    color: var(--first-text-color);
+}
+
+#introduction{
+    display: flex;
+    max-height: 600px;
+}
+
+#introduction-title{
+    font-size: 70px;
+    max-width: 75%;
+    z-index: 3;
+}
+
+#circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--first-text-color);
+    position: absolute;
+    left: 400px;
+    bottom: 100%;
+    top: 0px;
+}
+
+#year{
+    position: relative;
+    bottom: 480px;
+    left: 170px;
+    font-size: 150px;
+    font-weight: bold;
+    z-index: 0;
+    color: var(--first-text-color);
+}
+
+#guideline{
+    margin-top: 350px;
+}
+
+#sale{
+    margin-bottom: 330px;
+}
+
+#sale-container{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--first-text-color);
+    margin: auto -100px;
+}
+
+#inner-sale-container{
+    margin: 50px 0;
+    padding: 100px 300px;
+    border: solid 5px #a0a3ff;
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 1400px){
+    #shop-title{
+        visibility: hidden;
+    }
+    img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    #year{
+        font-size: 64px;
+        bottom: 133px;
+        left: 80px;
+    }
+    #circle{
+        width: 107px;
+        height: 107px;
+        left: 205px;
+        top: 30px
+    }
+    .controller-title{
+        top: 5px;
+    }
+}
