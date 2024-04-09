@@ -1,0 +1,23 @@
+{
+  "author": "Antonio Coltraro",
+  "description": "Practicing NPM and NodeJS",
+  "name": "fcc-learn-npm-package-json",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://idontknow/todo.git"
+  },
+  "keywords": [
+    "practice",
+    "project",
+    "freecodecamp"
+  ],
+  "version": "1.2.0"
+}
