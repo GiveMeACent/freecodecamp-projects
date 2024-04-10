@@ -1,0 +1,20 @@
+#quote-box {
+  background: red;
+  padding: 2.5rem;
+  width: 40rem;
+}
+
+#text {
+  color: aqua;
+}
+
+#author {
+  color: greenyellow;
+  text-align: right;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

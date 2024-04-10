@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
+import "./QuoteMachine.css";
 
 const QuoteMachine = (props) => {
   const [quotes, setQuotes] = useState(null);
@@ -36,19 +37,23 @@ const QuoteMachine = (props) => {
           <>
             <h1 id="text">{quote.quote}</h1>
             <h1 id="author">{quote.author}</h1>
-            <button
-              id="new-quote"
-              onClick={() => {
-                handleClickGenerateQuote();
-              }}
-            ></button>
-            <a
-              href="https://twitter.com/intent/tweet"
-              target="_blank"
-              id="tweet-quote"
-            >
-              Sample link
-            </a>
+            <div className="wrapper">
+              <a
+                href="https://twitter.com/intent/tweet"
+                target="_blank"
+                id="tweet-quote"
+              >
+                Sample link
+              </a>
+              <button
+                id="new-quote"
+                onClick={() => {
+                  handleClickGenerateQuote();
+                }}
+              >
+                New quote
+              </button>
+            </div>
           </>
         ) : (
           <>Loading...</>
