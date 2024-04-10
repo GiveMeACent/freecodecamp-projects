@@ -13,8 +13,44 @@
   text-align: right;
 }
 
+#new-quote {
+  background: #1877f2;
+  color: white;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px white solid;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#new-quote:hover {
+  background: #7fb2f6;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-button {
+  display: block;
+  background: #1877f2;
+  width: 1rem;
+  height: 1rem;
+  color: white;
+  padding: 1rem;
+  border: 2px white solid;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#tumblr-quote {
+  padding-left: 1rem;
 }

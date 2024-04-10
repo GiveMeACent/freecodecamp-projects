@@ -38,13 +38,20 @@ const QuoteMachine = (props) => {
             <h1 id="text">{quote.quote}</h1>
             <h1 id="author">{quote.author}</h1>
             <div className="wrapper">
-              <a
-                href="https://twitter.com/intent/tweet"
-                target="_blank"
-                id="tweet-quote"
-              >
-                Sample link
-              </a>
+              <div className="socials">
+                <a
+                  href="https://twitter.com/intent/tweet"
+                  target="_blank"
+                  id="tweet-quote"
+                  className="social-button"
+                ></a>
+                <a
+                  href="https://www.tumblr.com/"
+                  target="_blank"
+                  id="tumblr-quote"
+                  className="social-button"
+                ></a>
+              </div>
               <button
                 id="new-quote"
                 onClick={() => {
