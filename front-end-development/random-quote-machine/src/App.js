@@ -1,3 +1,11 @@
-import ReactDOM from "react-dom";
-import App from "./App";
-ReactDOM.render(<App />, document.getElementById("root"));
+import QuoteMachine from "./QuoteMachine";
+
+function App() {
+  return (
+    <>
+      <QuoteMachine />
+    </>
+  );
+}
+
+export default App;
