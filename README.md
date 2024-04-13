@@ -4,9 +4,10 @@ This repository hosts projects completed as part of the FreeCodeCamp curricula. 
 
 ## Curricula
 
-1. **Responsive web design**
+1. **Responsive Web Design**
 2. **JavaScript Algorithms and Data Structures**
-3. **Back End Development and APIs Certification**
+3. **Front End Development Libraries**
+4. **Back End Development and APIs Certification**
 
 ## Projects
 
@@ -21,5 +22,7 @@ This repository hosts projects completed as part of the FreeCodeCamp curricula. 
    - **Palindrome Checker**
    - **Roman Numeral Converter**
    - **Cash Register**
-3. **Back End Development and APIs Certification**
+3. **Front End Development Libraries**
+   - **Random Quote Machine**
+4. **Back End Development and APIs Certification**
    - **Working on it**
