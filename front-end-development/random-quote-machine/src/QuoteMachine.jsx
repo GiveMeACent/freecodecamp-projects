@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTumblr, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
-const QuoteMachine = (props) => {
+const QuoteMachine = () => {
   const [quotes, setQuotes] = useState(null);
   const [quote, setQuote] = useState("");
   const [currentColor, setCurrentColor] = useState("");
@@ -19,18 +19,6 @@ const QuoteMachine = (props) => {
     "#5b51de",
     "#ff004f",
   ];
-
-  useEffect(() => {
-    setCurrentColor(generateRandomColor());
-    (async () => {
-      const tmp = (
-        await Axios.get(
-          "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
-        )
-      ).data.quotes;
-      setQuotes(tmp);
-    })();
-  }, []);
 
   const generateRandomQuote = () => {
     const randomIndexQuote = Math.round(Math.random() * (quotes.length - 1));
@@ -47,11 +35,22 @@ const QuoteMachine = (props) => {
   };
 
   useEffect(() => {
+    setCurrentColor(generateRandomColor());
+    (async () => {
+      const tmp = (
+        await Axios.get(
+          "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
+        )
+      ).data.quotes;
+      setQuotes(tmp);
+    })();
+  }, []);
+
+  useEffect(() => {
     handleClickGenerateQuote();
   }, [quotes]);
 
   useEffect(() => {
-    console.log(document.body);
     document.body.style.background = currentColor;
   }, [currentColor]);
 
@@ -72,6 +71,7 @@ const QuoteMachine = (props) => {
                   target="_blank"
                   id="tweet-quote"
                   className="social-button"
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
@@ -80,6 +80,7 @@ const QuoteMachine = (props) => {
                   target="_blank"
                   id="tumblr-quote"
                   className="social-button"
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faTumblr} />
                 </a>
