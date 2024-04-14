@@ -1,12 +1,13 @@
-# Random Quote Machine
+# Markdown Previewer
 
-The Random Quote Machine project is a beginner-level front-end project often included in freeCodeCamp's curriculum. The goal of this project is to create a simple web page that displays random quotes each time a button is clicked.
+The Markdown Previewer project is another beginner-friendly project often found in freeCodeCamp's front-end curriculum. The main objective of this project is to create a web-based application that allows users to input Markdown syntax and see a live preview of the formatted content.
 
 ## Features:
 
-- **Display Quote**: The page should show a random quote along with its author.
-- **Generate Random Quotes**: Pressing a button should generate and display a new random quote.
-- **Styling and Design**: The page should have a pleasing and responsive design, often using CSS to enhance the presentation of the quotes.
+- **Input Markdown**: Users should be able to input Markdown syntax into a text area.
+- **Live Preview**: As users type Markdown, the application should display a live preview of the formatted content.
+- **Styling and Design**: The application should have a clean and user-friendly interface. CSS is typically used to style both the input and preview areas.
+- **Markdown Support**: The previewer should support a variety of Markdown features like headers, lists, links, and emphasis.
 
 ## Technologies Used:
 
@@ -15,7 +16,7 @@ The Random Quote Machine project is a beginner-level front-end project often inc
 - JavaScript
 - React
 
-This project is a great way for beginners to practice manipulating the DOM, handling events, and working with APIs.
+This project is a great way for beginners to practice handling user input, updating the DOM dynamically, and working with text formatting and parsing.
 
 ## Available Scripts
 
