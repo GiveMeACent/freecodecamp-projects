@@ -13,7 +13,7 @@ const Previewer = (props) => {
         <p className="previewer-title">Previewer</p>
         <button className="full-screen-button"></button>
       </div>
-      <div className="code">{markedCode}</div>
+      <div className="code" dangerouslySetInnerHTML={{ __html: markedCode }} />
     </div>
   );
 };
