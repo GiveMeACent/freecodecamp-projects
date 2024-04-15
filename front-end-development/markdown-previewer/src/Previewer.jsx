@@ -1,14 +1,19 @@
-import { useState, useEffect } from "react";
-import "./MarkdownPreviewer.css";
+import { useEffect, useState } from "react";
+import "./Previewer.css";
 
-const Previewer = () => {
+const Previewer = (props) => {
+  const [markedCode, setMarkedCode] = useState("");
+
+  useEffect(() => {
+    setMarkedCode(window.marked.parse(props.code));
+  }, [props.code]);
   return (
     <div className="previewer-wrapper">
       <div className="previewer-header">
         <p className="previewer-title">Previewer</p>
         <button className="full-screen-button"></button>
       </div>
-      <div className="code"></div>
+      <div className="code">{markedCode}</div>
     </div>
   );
 };
