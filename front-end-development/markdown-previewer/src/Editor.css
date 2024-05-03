@@ -1,0 +1,33 @@
+.editor-header {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(180, 37%, 45%);
+  border: 1px solid black;
+  border-bottom: none;
+  height: 2rem;
+  width: 70.312vh;
+}
+
+.editor-icon-title-wrapper {
+  margin-left: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.editor-full-screen-button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  margin-right: 0.8rem;
+}
+
+.editor-full-screen-button:hover {
+  cursor: pointer;
+  color: aqua;
+}

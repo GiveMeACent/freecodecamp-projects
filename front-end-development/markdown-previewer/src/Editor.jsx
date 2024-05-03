@@ -1,4 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode, faExpand } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
+import "./Editor.css";
 
 const Editor = (props) => {
   useEffect(() => {
@@ -8,11 +11,18 @@ const Editor = (props) => {
   return (
     <div className="editor-wrapper">
       <div className="editor-header">
-        <p className="editor-title">Editor</p>
-        <button className="full-screen-button"></button>
+        <div className="editor-icon-title-wrapper">
+          <div className="editor-icon">
+            <FontAwesomeIcon icon={faCode} />
+          </div>
+          <p className="editor-title">Editor</p>
+        </div>
+        <button className="editor-full-screen-button">
+          <FontAwesomeIcon icon={faExpand} />
+        </button>
       </div>
       <textarea
-        cols="30"
+        cols="62"
         rows="10"
         className="editor-textarea"
         onChange={(e) => {

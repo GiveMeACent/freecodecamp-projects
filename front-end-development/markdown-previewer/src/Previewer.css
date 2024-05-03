@@ -1,0 +1,42 @@
+.previewer-header {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #499f9f;
+  border: 1px solid black;
+  border-bottom: none;
+  height: 2rem;
+  width: 100vh;
+}
+
+.previewer-icon-title-wrapper {
+  margin-left: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.previewer-full-screen-button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  margin-right: 0.8rem;
+}
+
+.previewer-full-screen-button:hover {
+  cursor: pointer;
+  color: aqua;
+}
+
+.code {
+  height: 50vh;
+  width: 100vh;
+  background: #c0d8d8;
+  border: 1px solid black;
+  padding: 0.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
