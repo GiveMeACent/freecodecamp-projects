@@ -1,14 +1,27 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faExpand } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCode,
+  faExpand,
+  faMinimize,
+} from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import "./Previewer.css";
 
 const Previewer = (props) => {
   const [markedCode, setMarkedCode] = useState("");
+  const [fullScreenState, setFullScreenState] = useState(false);
+  const [codeDivHeight, setcodeDivHeight] = useState("50vh");
+
+  const handleClickFullscreen = () => {
+    if (!fullScreenState) setcodeDivHeight("100vh");
+    else setcodeDivHeight("50vh");
+    setFullScreenState(!fullScreenState);
+  };
 
   useEffect(() => {
     setMarkedCode(window.marked.parse(props.code));
   }, [props.code]);
+
   return (
     <div className="previewer-wrapper">
       <div className="previewer-header">
@@ -18,11 +31,21 @@ const Previewer = (props) => {
           </div>
           <p className="previewer-title">Previewer</p>
         </div>
-        <button className="previewer-full-screen-button">
-          <FontAwesomeIcon icon={faExpand} />
+        <button
+          className="previewer-full-screen-button"
+          onClick={() => {
+            handleClickFullscreen();
+          }}
+        >
+          <FontAwesomeIcon icon={fullScreenState ? faMinimize : faExpand} />
         </button>
       </div>
-      <div className="code" dangerouslySetInnerHTML={{ __html: markedCode }} />
+      <div
+        className="code"
+        id="preview"
+        dangerouslySetInnerHTML={{ __html: markedCode }}
+        style={{ height: codeDivHeight }}
+      />
     </div>
   );
 };

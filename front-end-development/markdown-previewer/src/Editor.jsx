@@ -1,12 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faExpand } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
+import {
+  faCode,
+  faExpand,
+  faMinimize,
+} from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 import "./Editor.css";
 
 const Editor = (props) => {
   useEffect(() => {
-    props.setCode("");
+    props.setCode(props.defaultCode);
   }, []);
+
+  const [fullScreenState, setFullScreenState] = useState(false);
+  const [textareaRows, setTextareaRows] = useState("10");
+
+  const handleClickFullscreen = () => {
+    if (!fullScreenState) setTextareaRows("75");
+    else setTextareaRows("10");
+    setFullScreenState(!fullScreenState);
+  };
 
   return (
     <div className="editor-wrapper">
@@ -17,17 +30,24 @@ const Editor = (props) => {
           </div>
           <p className="editor-title">Editor</p>
         </div>
-        <button className="editor-full-screen-button">
-          <FontAwesomeIcon icon={faExpand} />
+        <button
+          className="editor-full-screen-button"
+          onClick={() => {
+            handleClickFullscreen();
+          }}
+        >
+          <FontAwesomeIcon icon={fullScreenState ? faMinimize : faExpand} />
         </button>
       </div>
       <textarea
         cols="62"
-        rows="10"
+        rows={textareaRows}
         className="editor-textarea"
+        id="editor"
         onChange={(e) => {
           props.setCode(e.target.value);
         }}
+        defaultValue={props.defaultCode}
       ></textarea>
     </div>
   );
