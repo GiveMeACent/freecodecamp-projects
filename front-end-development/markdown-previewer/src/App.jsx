@@ -52,11 +52,25 @@ And here. | Okay. | I think we get it.
   `;
 
   const [code, setCode] = useState("");
+  const [isEditorNone, setEditorNone] = useState(false);
+  const [isPreviewerNone, setPreviewerNone] = useState(false);
 
   return (
     <div className="app">
-      <Editor setCode={setCode} defaultCode={defaultCode} />
-      <Previewer code={code} defaultCode={defaultCode} />
+      <Editor
+        setCode={setCode}
+        defaultCode={defaultCode}
+        isNone={isEditorNone}
+        isPreviewerNone={isPreviewerNone}
+        setPreviewerNone={setPreviewerNone}
+      />
+      <Previewer
+        code={code}
+        defaultCode={defaultCode}
+        isNone={isPreviewerNone}
+        isEditorNone={isEditorNone}
+        setEditorNone={setEditorNone}
+      />
     </div>
   );
 }

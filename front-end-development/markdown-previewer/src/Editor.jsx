@@ -19,9 +19,12 @@ const Editor = (props) => {
     if (!fullScreenState) setTextareaRows("75");
     else setTextareaRows("10");
     setFullScreenState(!fullScreenState);
+    props.setPreviewerNone(!props.isPreviewerNone);
   };
 
-  return (
+  return props.isNone ? (
+    <></>
+  ) : (
     <div className="editor-wrapper">
       <div className="editor-header">
         <div className="editor-icon-title-wrapper">

@@ -16,13 +16,16 @@ const Previewer = (props) => {
     if (!fullScreenState) setcodeDivHeight("100vh");
     else setcodeDivHeight("50vh");
     setFullScreenState(!fullScreenState);
+    props.setEditorNone(!props.isEditorNone);
   };
 
   useEffect(() => {
     setMarkedCode(window.marked.parse(props.code));
   }, [props.code]);
 
-  return (
+  return props.isNone ? (
+    <></>
+  ) : (
     <div className="previewer-wrapper">
       <div className="previewer-header">
         <div className="previewer-icon-title-wrapper">
