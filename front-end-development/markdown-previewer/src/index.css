@@ -11,15 +11,6 @@ body {
   font-family: "Russo One";
 }
 
-textarea {
-  resize: none;
-  border: 1px solid black;
-  background: #c0d8d8;
-  resize: vertical;
-  outline: none;
-  padding: 0.5rem;
-}
-
 .app {
   display: flex;
   flex-direction: column;

@@ -43,7 +43,6 @@ const Editor = (props) => {
         </button>
       </div>
       <textarea
-        cols="62"
         rows={textareaRows}
         className="editor-textarea"
         id="editor"

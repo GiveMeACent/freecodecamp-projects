@@ -8,7 +8,7 @@
   border: 1px solid black;
   border-bottom: none;
   height: 2rem;
-  width: 70.312vh;
+  width: 70vh;
   box-shadow: 1px 1px 10px 2px #3a5f5f;
 }
 
@@ -31,4 +31,14 @@
 .editor-full-screen-button:hover {
   cursor: pointer;
   color: aqua;
+}
+
+.editor-textarea {
+  resize: none;
+  width: 100%;
+  border: 1px solid black;
+  background: #c0d8d8;
+  resize: vertical;
+  outline: none;
+  padding: 0.5rem;
 }
