@@ -44,9 +44,15 @@
   overflow-x: hidden;
 }
 
-.code > pre {
-  margin: 1rem auto 1rem auto;
-  background: white;
+.code > p {
+  margin-top: 1rem;
+}
+
+.code > blockquote {
+  margin: 1rem auto auto 2rem;
+  color: #224b4b;
+  border-left: 3px solid #224b4b;
+  padding-left: 5px;
 }
 
 .code > p > img {
@@ -54,4 +60,54 @@
   max-height: 90%;
   display: block;
   margin: 1rem auto;
+}
+
+.code > table {
+  margin: 1rem auto 1rem 1rem;
+  border-collapse: collapse;
+}
+
+.code > table > thead > tr > th {
+  border: 2px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.code > table > tbody > tr > td {
+  border: 2px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.code > ul {
+  margin: 2rem auto 2rem 2rem;
+}
+
+.code > ul > li > ul {
+  margin-left: 1rem;
+}
+
+.code > ul > li > ul > li > ul {
+  margin-left: 1rem;
+}
+
+.code > ul > li > ul > li > ul > li > ul {
+  margin-left: 1rem;
+}
+
+.code > ol {
+  margin: 2rem auto 2rem 2rem;
+}
+
+.code > pre {
+  margin: 1rem auto 1rem auto;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.code > p > code {
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
 }

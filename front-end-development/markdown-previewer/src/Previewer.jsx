@@ -8,6 +8,10 @@ import { useEffect, useState } from "react";
 import "./Previewer.css";
 
 const Previewer = (props) => {
+  window.marked.use({
+    gfm: true,
+    breaks: true,
+  });
   const [markedCode, setMarkedCode] = useState("");
   const [fullScreenState, setFullScreenState] = useState(false);
   const [codeDivHeight, setcodeDivHeight] = useState("50vh");
