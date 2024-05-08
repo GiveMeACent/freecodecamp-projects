@@ -10,9 +10,9 @@ const DrumPad = (props) => {
   }, [props.url]);
 
   const handleClickPlayAudio = () => {
-    if (playing) {
-      audio.currentTime = 0;
-    } else audio.play();
+    if (playing) audio.currentTime = 0;
+
+    audio.play();
 
     setPlaying(!playing);
   };
@@ -22,7 +22,9 @@ const DrumPad = (props) => {
       onClick={() => {
         handleClickPlayAudio();
       }}
-    ></button>
+    >
+      {props.text}
+    </button>
   );
 };
 

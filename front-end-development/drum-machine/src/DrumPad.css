@@ -1,4 +1,17 @@
 .drum-button {
   width: 100px;
-  height: 100px;
+  height: 80px;
+  background-color: #808080;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  box-shadow: black 3px 3px 5px;
+}
+
+.drum-button:active {
+  background-color: #ffa500;
+  transform: scale(0.98);
+  box-shadow: none;
+  border: none;
 }
