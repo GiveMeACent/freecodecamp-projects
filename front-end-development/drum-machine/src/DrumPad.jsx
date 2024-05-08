@@ -11,11 +11,10 @@ const DrumPad = (props) => {
 
   const handleClickPlayAudio = () => {
     if (playing) {
-      audio.pause();
       audio.currentTime = 0;
     } else audio.play();
 
-    setPlaying(!setPlaying);
+    setPlaying(!playing);
   };
   return (
     <button
